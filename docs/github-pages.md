@@ -11,7 +11,7 @@
 - 公開元ブランチ: `main`
 - 公開方式: GitHub Actions
 - 公開対象: リポジトリ直下の静的LP
-- 想定URL: `https://<GitHubユーザー名>.github.io/repairct-lp/`
+- 想定URL: `https://lupisflora-n.github.io/repairct-lp/`
 
 ## 反映の流れ
 
