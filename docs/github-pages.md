@@ -7,11 +7,11 @@
 
 ## 基本方針
 
-- リポジトリ名: `-repairct-lp`
+- リポジトリ名: `repairct`
 - 公開元ブランチ: `main`
 - 公開方式: GitHub Actions
 - 公開対象: リポジトリ直下の静的LP
-- 想定URL: `https://lupisflora-n.github.io/-repairct-lp/`
+- 想定URL: `https://lupisflora-n.github.io/repairct/`
 
 ## 反映の流れ
 
@@ -23,7 +23,7 @@
 
 ## GitHub側で必要な初回設定
 
-1. GitHubで `-repairct-lp` リポジトリを作成する。
+1. GitHubで `repairct` リポジトリを作成する。
 2. ローカルのこのプロジェクトをそのリポジトリへpushする。
 3. GitHubの `Settings > Pages` を開く。
 4. Sourceを `GitHub Actions` にする。
