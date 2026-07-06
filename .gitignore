@@ -14,3 +14,4 @@ yarn-error.log*
 tmp/
 dist/
 build/
+.codex-remote-attachments/

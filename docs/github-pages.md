@@ -36,3 +36,6 @@
 - GitHub Pagesを使う場合、基本的に公開URLはインターネット上からアクセスできる。
 - 非公開前提の内容や未確認写真は本番掲載前に入れない。
 - 施工写真を入れる場合は掲載許可を確認してからpushする。
+- `gh-pages` ブランチに `index.html` が存在しても、GitHub Pagesサイトが未作成の場合は `https://lupisflora-n.github.io/repairct/` が404になる。
+- その場合は `Settings > Pages` で `Deploy from a branch` / `gh-pages` / `/root` を保存する。
+- 急ぎで知人に共有する場合は、暫定URLとして `https://htmlpreview.github.io/?https://github.com/lupisflora-n/repairct/blob/gh-pages/index.html` を使う。

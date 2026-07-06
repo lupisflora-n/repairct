@@ -50,3 +50,9 @@ GitHub側でPagesを有効化する場合は、`Settings > Pages` の Source を
 初回公開後は、LP本体を編集してpushするたびに同じプレビューURLが更新されます。
 
 詳しい初回設定は [docs/github-pages.md](docs/github-pages.md) を参照してください。
+
+## 緊急プレビューURL
+
+GitHub Pagesが未有効で `https://lupisflora-n.github.io/repairct/` が404になる場合は、暫定確認用として以下を使います。
+
+https://htmlpreview.github.io/?https://github.com/lupisflora-n/repairct/blob/gh-pages/index.html
