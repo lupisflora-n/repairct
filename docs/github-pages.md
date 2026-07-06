@@ -8,8 +8,8 @@
 ## 基本方針
 
 - リポジトリ名: `repairct`
-- 公開元ブランチ: `main`
-- 公開方式: GitHub Actions
+- 公開元ブランチ: `gh-pages`
+- 公開方式: Deploy from a branch
 - 公開対象: リポジトリ直下の静的LP
 - 想定URL: `https://lupisflora-n.github.io/repairct/`
 
@@ -18,16 +18,18 @@
 1. `index.html` / `style.css` / `script.js` / `assets/images/` を編集する。
 2. 変更を `main` にcommitする。
 3. `main` をGitHubへpushする。
-4. `.github/workflows/pages.yml` が自動実行される。
-5. 同じGitHub Pages URLに最新LPが反映される。
+4. `.github/workflows/sync-gh-pages.yml` が `gh-pages` ブランチを自動同期する。
+5. GitHub Pagesが `gh-pages` ブランチの内容を公開する。
+6. 同じGitHub Pages URLに最新LPが反映される。
 
 ## GitHub側で必要な初回設定
 
 1. GitHubで `repairct` リポジトリを作成する。
 2. ローカルのこのプロジェクトをそのリポジトリへpushする。
 3. GitHubの `Settings > Pages` を開く。
-4. Sourceを `GitHub Actions` にする。
-5. Actionsの `Deploy GitHub Pages` が成功したら公開URLを確認する。
+4. Sourceを `Deploy from a branch` にする。
+5. Branchを `gh-pages`、Folderを `/root` にする。
+6. 保存後、公開URLを確認する。
 
 ## 注意
 
