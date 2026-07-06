@@ -138,7 +138,7 @@ If there is ambiguity, prefer:
 - Design: black-based transparent monochrome
 - Mood: stylish, young, refined, trustworthy
 - Build: one-page static LP
-- GitHub repository name: repairct-lp
+- GitHub repository name: -n-repairct-lp
 - Repository visibility: private
 - Photos, Instagram URL, representative name, and logo are not finalized yet
 - Use placeholders where necessary

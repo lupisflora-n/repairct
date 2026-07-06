@@ -43,7 +43,7 @@ docs/github-pages.md
 - 公開元: `main` ブランチ
 - 公開対象: リポジトリ直下の静的ファイル
 - 更新方法: `main` にpushするとGitHub Actionsが自動でPagesへ反映
-- 想定URL: `https://lupisflora-n.github.io/repairct-lp/`
+- 想定URL: `https://lupisflora-n.github.io/-n-repairct-lp/`
 
 GitHub側でPagesを有効化する場合は、`Settings > Pages` の Source を `GitHub Actions` にします。
 
