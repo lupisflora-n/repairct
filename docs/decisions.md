@@ -19,3 +19,6 @@
 - FIX: ヘッダーのRロゴマークはRロゴ通常版に差し替える
 - FIX: Instagram URLは `https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&utm_source=qr`
 - FIX: 施工写真は元の色のまま掲載し、モノトーン加工しない
+- FIX: 対応エリア画像は神奈川・東京・千葉のみを地図上に表示する
+- FIX: 対応エリア画像内には見出しや本文コピーなどの文字を入れず、視覚的な情報画像として扱う
+- FIX: 対応エリア画像のピン位置は現行位置で進める
