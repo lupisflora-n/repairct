@@ -1,7 +1,44 @@
 (() => {
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion =
+    typeof window.matchMedia !== "function" ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const pageIntro = document.querySelector("[data-page-intro]");
+  const finalIntroElement = pageIntro?.querySelector("[data-intro-final]");
+  const fallbackIntroDuration = 2800;
+  let introCompleted = false;
 
-  document.body.classList.add("is-ready");
+  const completeIntro = () => {
+    if (introCompleted) {
+      return;
+    }
+
+    introCompleted = true;
+    if (window.__repairctIntroFallback) {
+      window.clearTimeout(window.__repairctIntroFallback);
+      window.__repairctIntroFallback = null;
+    }
+
+    document.body.classList.remove("is-intro-playing");
+    document.body.classList.add("is-ready");
+
+    if (pageIntro) {
+      pageIntro.classList.add("is-complete");
+      pageIntro.addEventListener("transitionend", () => pageIntro.remove(), { once: true });
+      window.setTimeout(() => pageIntro.remove(), 420);
+    }
+  };
+  window.__repairctShowPage = completeIntro;
+
+  if (prefersReducedMotion || !pageIntro) {
+    completeIntro();
+  } else if (finalIntroElement) {
+    finalIntroElement.addEventListener("animationend", () => {
+      window.setTimeout(completeIntro, 80);
+    }, { once: true });
+    window.setTimeout(completeIntro, fallbackIntroDuration);
+  } else {
+    window.setTimeout(completeIntro, fallbackIntroDuration);
+  }
 
   const yearNode = document.querySelector("[data-current-year]");
   if (yearNode) {

@@ -29,6 +29,9 @@
     >
     <meta name="twitter:image" content="https://lupisflora-n.github.io/repairct/assets/images/placeholder-hero-material.jpg">
     <meta name="theme-color" content="#050505">
+    <script>
+      document.documentElement.classList.add("has-js");
+    </script>
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
       {
@@ -56,7 +59,71 @@
     </script>
   </head>
   <body>
+    <script>
+      (() => {
+        const showPage = () => {
+          document.body.classList.remove("is-intro-playing");
+          document.body.classList.add("is-ready");
+          document.querySelector("[data-page-intro]")?.remove();
+          document.querySelectorAll(".reveal").forEach((target) => target.classList.add("is-visible"));
+        };
+
+        let skipIntro = false;
+        try {
+          skipIntro =
+            typeof window.matchMedia !== "function" ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        } catch (error) {
+          skipIntro = true;
+        }
+
+        window.__repairctShowPage = showPage;
+        if (skipIntro) {
+          document.addEventListener("DOMContentLoaded", showPage, { once: true });
+        } else {
+          document.body.classList.add("is-intro-playing");
+          window.__repairctIntroFallback = window.setTimeout(showPage, 4200);
+        }
+      })();
+    </script>
     <a class="skip-link" href="#main">本文へ移動</a>
+
+    <div class="page-intro" aria-hidden="true" data-page-intro>
+      <div class="intro-logo" role="presentation">
+        <svg class="intro-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" focusable="false">
+          <defs>
+            <linearGradient id="introLogoFill" x1="70" x2="860" y1="30" y2="230" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset="0.52" stop-color="#eeeeee"/>
+              <stop offset="1" stop-color="#a8a8a8"/>
+            </linearGradient>
+            <linearGradient id="introAccent" x1="70" x2="1170" y1="204" y2="116" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.10"/>
+              <stop offset="0.35" stop-color="#ffffff" stop-opacity="0.88"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0.16"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(82 20) skewX(-8)">
+            <g class="intro-wordmark" data-intro-final>
+              <text
+                x="0"
+                y="160"
+                fill="url(#introLogoFill)"
+                font-family="Bahnschrift, 'Arial Narrow', 'Segoe UI', Arial, sans-serif"
+                font-size="164"
+                font-weight="700"
+                letter-spacing="3"
+                textLength="760"
+                lengthAdjust="spacingAndGlyphs">Repairct</text>
+            </g>
+          </g>
+          <path class="intro-flow-shadow" d="M92 199 C300 167 505 182 752 151 C918 130 1054 122 1196 129" fill="none" stroke="#ffffff" stroke-width="17" stroke-linecap="round" stroke-opacity="0.045"/>
+          <path class="intro-flow-line" d="M92 199 C300 167 505 182 752 151 C918 130 1054 122 1196 129" fill="none" stroke="url(#introAccent)" stroke-width="7" stroke-linecap="round" pathLength="1"/>
+          <path class="intro-base-line" d="M92 222 H1188" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.18"/>
+          <text class="intro-tagline" x="93" y="306">傷を、なかったことに近づける。</text>
+        </svg>
+      </div>
+    </div>
 
     <header class="site-header" aria-label="サイトヘッダー">
       <div class="header-inner">
@@ -100,7 +167,7 @@
             <p class="hero-tagline">傷を、なかったことに近づける。</p>
             <p class="hero-lead">
               相模原発の住宅内装リペア。木部・金属・フローリング・建具・特殊素材まで、
-              直せるか分からないものもまずはInstagram DMから相談できます。
+              直せるか分からないものも、まずは<span class="hero-lead-break">DMから相談できます。</span>
             </p>
             <div class="hero-actions">
               <a class="button button-primary instagram-link" href="https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&amp;utm_source=qr" data-instagram-link>
@@ -170,11 +237,11 @@
           <article class="case-card" tabindex="0">
             <div class="case-media">
               <figure>
-                <img src="assets/images/works/floor-scratch-before.jpg" alt="床傷の補修前写真" width="1108" height="1477">
+                <img src="assets/images/works/floor-scratch-before.jpg" alt="床傷の補修前写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>Before</figcaption>
               </figure>
               <figure>
-                <img src="assets/images/works/floor-scratch-after.jpg" alt="床傷の補修後写真" width="1108" height="1477">
+                <img src="assets/images/works/floor-scratch-after.jpg" alt="床傷の補修後写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>After</figcaption>
               </figure>
             </div>
@@ -187,11 +254,11 @@
           <article class="case-card" tabindex="0">
             <div class="case-media">
               <figure>
-                <img src="assets/images/works/frame-scratch-before.jpg" alt="枠傷の補修前写真" width="1108" height="1477">
+                <img src="assets/images/works/frame-scratch-before.jpg" alt="枠傷の補修前写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>Before</figcaption>
               </figure>
               <figure>
-                <img src="assets/images/works/frame-scratch-after.jpg" alt="枠傷の補修後写真" width="1262" height="1298">
+                <img src="assets/images/works/frame-scratch-after.jpg" alt="枠傷の補修後写真" width="1262" height="1298" loading="lazy" decoding="async">
                 <figcaption>After</figcaption>
               </figure>
             </div>
@@ -204,11 +271,11 @@
           <article class="case-card" tabindex="0">
             <div class="case-media">
               <figure>
-                <img src="assets/images/works/door-before.jpg" alt="建具の補修前写真" width="1108" height="1477">
+                <img src="assets/images/works/door-before.jpg" alt="建具の補修前写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>Before</figcaption>
               </figure>
               <figure>
-                <img src="assets/images/works/door-after.jpg" alt="建具の補修後写真" width="1108" height="1477">
+                <img src="assets/images/works/door-after.jpg" alt="建具の補修後写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>After</figcaption>
               </figure>
             </div>
@@ -221,11 +288,11 @@
           <article class="case-card" tabindex="0">
             <div class="case-media">
               <figure>
-                <img src="assets/images/works/floor-fade-before.jpg" alt="床色褪せの補修前写真" width="1108" height="1477">
+                <img src="assets/images/works/floor-fade-before.jpg" alt="床色褪せの補修前写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>Before</figcaption>
               </figure>
               <figure>
-                <img src="assets/images/works/floor-fade-after.jpg" alt="床色褪せの補修後写真" width="1108" height="1477">
+                <img src="assets/images/works/floor-fade-after.jpg" alt="床色褪せの補修後写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>After</figcaption>
               </figure>
             </div>
@@ -238,11 +305,11 @@
           <article class="case-card" tabindex="0">
             <div class="case-media">
               <figure>
-                <img src="assets/images/works/burn-mark-before.jpg" alt="焦げ跡の補修前写真" width="1108" height="1477">
+                <img src="assets/images/works/burn-mark-before.jpg" alt="焦げ跡の補修前写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>Before</figcaption>
               </figure>
               <figure>
-                <img src="assets/images/works/burn-mark-after.jpg" alt="焦げ跡の補修後写真" width="1108" height="1477">
+                <img src="assets/images/works/burn-mark-after.jpg" alt="焦げ跡の補修後写真" width="1108" height="1477" loading="lazy" decoding="async">
                 <figcaption>After</figcaption>
               </figure>
             </div>
@@ -324,6 +391,7 @@
               width="960"
               height="620"
               loading="lazy"
+              decoding="async"
             >
           </div>
           <ul>
