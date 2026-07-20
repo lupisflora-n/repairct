@@ -12,6 +12,7 @@
   --radius: 8px;
   --container: min(100% - 32px, 1120px);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --intro-fade: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: dark;
 }
 
@@ -116,8 +117,8 @@ a {
 main,
 .site-footer {
   transition:
-    opacity 520ms var(--ease),
-    transform 520ms var(--ease);
+    opacity 860ms var(--intro-fade),
+    transform 860ms var(--intro-fade);
 }
 
 body.is-intro-playing {
@@ -132,7 +133,7 @@ body.is-intro-playing:not(.is-intro-fading) .site-header,
 body.is-intro-playing:not(.is-intro-fading) main,
 body.is-intro-playing:not(.is-intro-fading) .site-footer {
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(4px);
 }
 
 .page-intro {
@@ -153,8 +154,8 @@ body.is-intro-playing:not(.is-intro-fading) .site-footer {
     ),
     #050505;
   transition:
-    opacity 520ms var(--ease),
-    visibility 0s linear 520ms;
+    opacity 1040ms var(--intro-fade),
+    visibility 0s linear 1040ms;
   contain: layout paint;
 }
 
@@ -950,6 +951,12 @@ html.has-js .reveal {
 }
 
 .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.has-js .reveal.is-visible,
+html.has-js body.is-ready .reveal {
   opacity: 1;
   transform: translateY(0);
 }

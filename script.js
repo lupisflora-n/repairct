@@ -1,13 +1,25 @@
 (() => {
-  const prefersReducedMotion =
-    typeof window.matchMedia !== "function" ||
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const getPrefersReducedMotion = () => {
+    try {
+      return (
+        typeof window.matchMedia !== "function" ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      );
+    } catch (error) {
+      return true;
+    }
+  };
+  const prefersReducedMotion = getPrefersReducedMotion();
   const pageIntro = document.querySelector("[data-page-intro]");
   const finalIntroElement = pageIntro?.querySelector("[data-intro-final]");
-  const pageRevealDelay = 580;
-  const fallbackIntroDuration = 3300;
-  const fadeDuration = 620;
+  const pageRevealDelay = 920;
+  const fallbackIntroDuration = 3800;
+  const fadeDuration = 1120;
   let introCompleted = false;
+
+  const revealAllSections = () => {
+    document.querySelectorAll(".reveal").forEach((target) => target.classList.add("is-visible"));
+  };
 
   const completeIntro = () => {
     if (introCompleted) {
@@ -22,6 +34,7 @@
 
     document.body.classList.add("is-intro-fading");
     document.body.classList.add("is-ready");
+    revealAllSections();
 
     if (pageIntro) {
       const removeIntro = () => {

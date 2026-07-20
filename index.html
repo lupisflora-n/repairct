@@ -74,7 +74,7 @@
             window.setTimeout(() => {
               document.body.classList.remove("is-intro-playing", "is-intro-fading");
               pageIntro.remove();
-            }, 680);
+            }, 1120);
             return;
           }
 
@@ -96,7 +96,7 @@
           document.addEventListener("DOMContentLoaded", showPage, { once: true });
         } else {
           document.body.classList.add("is-intro-playing");
-          window.__repairctIntroFallback = window.setTimeout(showPage, 4700);
+          window.__repairctIntroFallback = window.setTimeout(showPage, 5400);
         }
       })();
     </script>
