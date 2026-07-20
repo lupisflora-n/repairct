@@ -140,7 +140,8 @@ If there is ambiguity, prefer:
 - Build: one-page static LP
 - GitHub repository name: repairct
 - Repository visibility: private
-- Photos and Instagram URL are not finalized yet
+- Instagram URL: https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&utm_source=qr
+- Photos are partially finalized for the repair photo list
 - Representative name: 田中佑弥
 - Independent age: 23
 - Do not publish sash Before / After photos
@@ -172,7 +173,7 @@ Do not:
 - add a framework unless asked
 - create unnecessary build tooling
 - overcomplicate the structure
-- invent a phone number, address, or real Instagram URL
+- invent a phone number or address
 - promise perfect repair
 - write "anything can be fixed"
 - use excessive animations

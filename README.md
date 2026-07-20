@@ -27,8 +27,8 @@ docs/github-pages.md
 
 ## 後から差し替える項目
 
-- Instagram URL: 現在は `#`
-- 施工写真: `assets/images/placeholder-*.jpg`
+- Instagram URL: `https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&utm_source=qr`
+- 施工写真: `assets/images/works/` に現在のBefore / After写真を配置済み
 - 代表者名: 田中佑弥
 - ロゴ画像: ヒーローに `assets/logos/repairct-wordmark-flow.svg`、ヘッダーに `assets/logos/repairct-r-flow.svg`
 
@@ -59,4 +59,6 @@ https://lupisflora-n.github.io/repairct/
 
 反映直後に古い表示が残る場合は、ブラウザやLINE内ブラウザのキャッシュ回避用に以下を使います。
 
-https://lupisflora-n.github.io/repairct/?v=439ce25
+`https://lupisflora-n.github.io/repairct/?v=任意の文字列`
+
+例: `https://lupisflora-n.github.io/repairct/?v=latest`
