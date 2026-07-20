@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Repairct R flow logo</title>
+  <desc id="desc">Selected Repairct R monogram from the Flow Edge concept, for dark backgrounds.</desc>
+  <defs>
+    <linearGradient id="logoFill" x1="90" x2="414" y1="80" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.52" stop-color="#ededed"/>
+      <stop offset="1" stop-color="#a7a7a7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="78" x2="440" y1="342" y2="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="0.42" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.20"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(38 0) skewX(-10)">
+    <text
+      x="238"
+      y="386"
+      fill="url(#logoFill)"
+      font-family="Bahnschrift, 'Arial Narrow', 'Segoe UI', Arial, sans-serif"
+      font-size="350"
+      font-weight="700"
+      letter-spacing="-16"
+      text-anchor="middle">R</text>
+  </g>
+  <path d="M100 336 C202 250 306 222 430 124" fill="none" stroke="#050505" stroke-width="42" stroke-linecap="round"/>
+  <path d="M106 330 C207 248 308 220 424 128" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
+</svg>

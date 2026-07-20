@@ -15,6 +15,7 @@
 - FIX: 独立した年齢は23歳
 - FIX: サッシのBefore / After写真は掲載しない
 - FIX: プロフィールは名前だけを掲載する
+- FIX: ヘッダー直下のRepairct文字は全体ロゴ通常版に差し替える
+- FIX: ヘッダーのRロゴマークはRロゴ通常版に差し替える
 - UNFIXED: Instagram URL
 - UNFIXED: 施工写真
-- UNFIXED: ロゴ画像

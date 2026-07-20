@@ -30,7 +30,7 @@ docs/github-pages.md
 - Instagram URL: 現在は `#`
 - 施工写真: `assets/images/placeholder-*.jpg`
 - 代表者名: 田中佑弥
-- ロゴ画像: `index.html` のヘッダー内ブランドマーク
+- ロゴ画像: ヒーローに `assets/logos/repairct-wordmark-flow.svg`、ヘッダーに `assets/logos/repairct-r-flow.svg`
 
 ## ローカルでの確認方法
 

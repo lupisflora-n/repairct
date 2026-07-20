@@ -157,6 +157,12 @@ a {
   line-height: 1;
 }
 
+.brand-mark-logo {
+  display: block;
+  padding: 4px;
+  object-fit: contain;
+}
+
 .brand-name {
   font-size: 1rem;
   font-weight: 700;
@@ -256,10 +262,14 @@ body.is-ready .hero-copy {
 
 .hero h1 {
   margin: 0;
-  font-size: 2.75rem;
   line-height: 0.98;
-  font-weight: 760;
-  letter-spacing: 0;
+}
+
+.hero-logo {
+  display: block;
+  width: min(100%, 430px);
+  height: auto;
+  filter: drop-shadow(0 18px 34px rgba(255, 255, 255, 0.08));
 }
 
 .hero-tagline {
@@ -881,7 +891,11 @@ body.is-ready .hero-copy {
   }
 
   .hero h1 {
-    font-size: 4.85rem;
+    max-width: 560px;
+  }
+
+  .hero-logo {
+    width: min(100%, 560px);
   }
 
   .hero-tagline {
