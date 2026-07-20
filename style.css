@@ -558,16 +558,12 @@ body.is-ready .hero-copy {
   height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  filter: saturate(0.12) contrast(1.05);
   transform: scale(1.01);
-  transition:
-    transform 320ms var(--ease),
-    filter 320ms var(--ease);
+  transition: transform 320ms var(--ease);
 }
 
 .case-card:hover .case-media img,
 .case-card.is-active .case-media img {
-  filter: saturate(0.08) contrast(1.14) brightness(1.04);
   transform: scale(1.045);
 }
 
