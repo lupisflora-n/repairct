@@ -62,10 +62,24 @@
     <script>
       (() => {
         const showPage = () => {
-          document.body.classList.remove("is-intro-playing");
+          const pageIntro = document.querySelector("[data-page-intro]");
+          const wasIntroPlaying = document.body.classList.contains("is-intro-playing");
+
+          document.body.classList.add("is-intro-fading");
           document.body.classList.add("is-ready");
-          document.querySelector("[data-page-intro]")?.remove();
           document.querySelectorAll(".reveal").forEach((target) => target.classList.add("is-visible"));
+
+          if (pageIntro && wasIntroPlaying) {
+            pageIntro.classList.add("is-complete");
+            window.setTimeout(() => {
+              document.body.classList.remove("is-intro-playing", "is-intro-fading");
+              pageIntro.remove();
+            }, 680);
+            return;
+          }
+
+          document.body.classList.remove("is-intro-playing", "is-intro-fading");
+          pageIntro?.remove();
         };
 
         let skipIntro = false;
@@ -82,7 +96,7 @@
           document.addEventListener("DOMContentLoaded", showPage, { once: true });
         } else {
           document.body.classList.add("is-intro-playing");
-          window.__repairctIntroFallback = window.setTimeout(showPage, 4200);
+          window.__repairctIntroFallback = window.setTimeout(showPage, 4700);
         }
       })();
     </script>

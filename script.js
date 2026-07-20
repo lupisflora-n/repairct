@@ -4,7 +4,9 @@
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const pageIntro = document.querySelector("[data-page-intro]");
   const finalIntroElement = pageIntro?.querySelector("[data-intro-final]");
-  const fallbackIntroDuration = 2800;
+  const pageRevealDelay = 580;
+  const fallbackIntroDuration = 3300;
+  const fadeDuration = 620;
   let introCompleted = false;
 
   const completeIntro = () => {
@@ -18,13 +20,24 @@
       window.__repairctIntroFallback = null;
     }
 
-    document.body.classList.remove("is-intro-playing");
+    document.body.classList.add("is-intro-fading");
     document.body.classList.add("is-ready");
 
     if (pageIntro) {
+      const removeIntro = () => {
+        document.body.classList.remove("is-intro-playing", "is-intro-fading");
+        pageIntro.remove();
+      };
+
       pageIntro.classList.add("is-complete");
-      pageIntro.addEventListener("transitionend", () => pageIntro.remove(), { once: true });
-      window.setTimeout(() => pageIntro.remove(), 420);
+      pageIntro.addEventListener("transitionend", (event) => {
+        if (event.propertyName === "opacity") {
+          removeIntro();
+        }
+      }, { once: true });
+      window.setTimeout(removeIntro, fadeDuration);
+    } else {
+      document.body.classList.remove("is-intro-playing", "is-intro-fading");
     }
   };
   window.__repairctShowPage = completeIntro;
@@ -33,7 +46,7 @@
     completeIntro();
   } else if (finalIntroElement) {
     finalIntroElement.addEventListener("animationend", () => {
-      window.setTimeout(completeIntro, 80);
+      window.setTimeout(completeIntro, pageRevealDelay);
     }, { once: true });
     window.setTimeout(completeIntro, fallbackIntroDuration);
   } else {

@@ -116,8 +116,8 @@ a {
 main,
 .site-footer {
   transition:
-    opacity 280ms var(--ease),
-    transform 280ms var(--ease);
+    opacity 520ms var(--ease),
+    transform 520ms var(--ease);
 }
 
 body.is-intro-playing {
@@ -128,9 +128,9 @@ body.is-intro-playing::after {
   animation-play-state: paused;
 }
 
-body.is-intro-playing .site-header,
-body.is-intro-playing main,
-body.is-intro-playing .site-footer {
+body.is-intro-playing:not(.is-intro-fading) .site-header,
+body.is-intro-playing:not(.is-intro-fading) main,
+body.is-intro-playing:not(.is-intro-fading) .site-footer {
   opacity: 0;
   transform: translateY(8px);
 }
@@ -153,12 +153,13 @@ body.is-intro-playing .site-footer {
     ),
     #050505;
   transition:
-    opacity 280ms var(--ease),
-    visibility 280ms var(--ease);
+    opacity 520ms var(--ease),
+    visibility 0s linear 520ms;
   contain: layout paint;
 }
 
-body.is-intro-playing .page-intro {
+body.is-intro-playing .page-intro,
+body.is-intro-fading .page-intro {
   display: grid;
 }
 
