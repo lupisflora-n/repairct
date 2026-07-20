@@ -6,7 +6,7 @@
 - FIX: ブラック基調・透明感あるモノトーン
 - FIX: 1枚ものの静的LP
 - FIX: GitHub管理前提
-- FIX: 施工写真などは後から差し替え
+- FIX: 対応できる補修にはBefore / After写真一覧を掲載する
 - FIX: CF・クロスは小規模な傷補修の相談範囲として扱う
 - FIX: 料金訴求よりDM相談訴求を中心にする
 - FIX: スマホ確認用プレビューはGitHub PagesのURL公開を基本にする
@@ -14,8 +14,8 @@
 - FIX: 代表者名は田中佑弥
 - FIX: 独立した年齢は23歳
 - FIX: サッシのBefore / After写真は掲載しない
-- FIX: プロフィールは名前だけを掲載する
+- FIX: プロフィールは代表者名・職人としての背景・短い経歴の流れを掲載する
 - FIX: ヘッダー直下のRepairct文字は全体ロゴ通常版に差し替える
 - FIX: ヘッダーのRロゴマークはRロゴ通常版に差し替える
-- UNFIXED: Instagram URL
-- UNFIXED: 施工写真
+- FIX: Instagram URLは `https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&utm_source=qr`
+- FIX: 施工写真は元の色のまま掲載し、モノトーン加工しない

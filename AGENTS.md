@@ -145,7 +145,7 @@ If there is ambiguity, prefer:
 - Representative name: 田中佑弥
 - Independent age: 23
 - Do not publish sash Before / After photos
-- Profile section should show the name only
+- Profile section should show the representative name, short craft background story, and career timeline
 - Use the normal full Repairct logo under the header in the hero
 - Use the normal R logo mark in the header brand area
 - Use repair photos in their original color without monochrome or tone-matching filters
