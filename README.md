@@ -51,8 +51,12 @@ GitHub側でPagesを有効化する場合は、`Settings > Pages` の Source を
 
 詳しい初回設定は [docs/github-pages.md](docs/github-pages.md) を参照してください。
 
-## 緊急プレビューURL
+## スマホ確認URL
 
-GitHub Pagesが未有効で `https://lupisflora-n.github.io/repairct/` が404になる場合は、暫定確認用として以下を使います。
+スマホやLINEで確認する場合は、以下のGitHub Pages URLを使います。
 
-https://htmlpreview.github.io/?https://github.com/lupisflora-n/repairct/blob/gh-pages/index.html
+https://lupisflora-n.github.io/repairct/
+
+反映直後に古い表示が残る場合は、ブラウザやLINE内ブラウザのキャッシュ回避用に以下を使います。
+
+https://lupisflora-n.github.io/repairct/?v=439ce25

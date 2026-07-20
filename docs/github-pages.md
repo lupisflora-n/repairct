@@ -36,4 +36,5 @@
 - 施工写真を入れる場合は掲載許可を確認してからpushする。
 - GitHub Pagesサイトが未作成の場合は `https://lupisflora-n.github.io/repairct/` が404になる。
 - その場合は `Settings > Pages` で `GitHub Actions` を保存する。
-- 急ぎで知人に共有する場合は、暫定URLとして `https://htmlpreview.github.io/?https://github.com/lupisflora-n/repairct/blob/gh-pages/index.html` を使う。
+- `htmlpreview.github.io` はキャッシュや取得仕様で古い内容が出る場合があるため、スマホ確認には使わない。
+- 反映直後に古い表示が残る場合は、キャッシュ回避用に `https://lupisflora-n.github.io/repairct/?v=439ce25` のようにクエリ付きURLで確認する。
