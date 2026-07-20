@@ -140,7 +140,11 @@ If there is ambiguity, prefer:
 - Build: one-page static LP
 - GitHub repository name: repairct
 - Repository visibility: private
-- Photos, Instagram URL, representative name, and logo are not finalized yet
+- Photos, Instagram URL, and logo are not finalized yet
+- Representative name: 田中佑弥
+- Independent age: 23
+- Do not publish sash Before / After photos
+- Profile section should show the name only
 - Use placeholders where necessary
 
 ## Important Service Scope Note

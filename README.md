@@ -29,7 +29,7 @@ docs/github-pages.md
 
 - Instagram URL: 現在は `#`
 - 施工写真: `assets/images/placeholder-*.jpg`
-- 代表者名: `index.html` のプロフィールセクション
+- 代表者名: 田中佑弥
 - ロゴ画像: `index.html` のヘッダー内ブランドマーク
 
 ## ローカルでの確認方法

@@ -645,6 +645,10 @@ body.is-ready .hero-copy {
   font-weight: 700;
 }
 
+.profile-card-simple {
+  max-width: 720px;
+}
+
 .area-panel {
   display: grid;
   gap: 22px;
@@ -907,6 +911,10 @@ body.is-ready .hero-copy {
     grid-template-columns: 0.82fr 1fr;
     align-items: center;
     padding: 24px;
+  }
+
+  .profile-card-simple {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {

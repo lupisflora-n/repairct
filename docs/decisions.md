@@ -11,8 +11,10 @@
 - FIX: 料金訴求よりDM相談訴求を中心にする
 - FIX: スマホ確認用プレビューはGitHub PagesのURL公開を基本にする
 - FIX: `main` ブランチ更新をGitHub Pagesへ自動反映する
+- FIX: 代表者名は田中佑弥
+- FIX: 独立した年齢は23歳
+- FIX: サッシのBefore / After写真は掲載しない
+- FIX: プロフィールは名前だけを掲載する
 - UNFIXED: Instagram URL
 - UNFIXED: 施工写真
-- UNFIXED: 代表者名
 - UNFIXED: ロゴ画像
-- UNFIXED: GitHub Pages公開URL
