@@ -40,12 +40,12 @@ docs/github-pages.md
 
 ネットワークやLINEのファイル表示に左右されない確認用として、GitHub PagesでURLプレビューする想定です。
 
-- 公開元: `gh-pages` ブランチ
+- 公開元: GitHub Actions
 - 公開対象: リポジトリ直下の静的ファイル
-- 更新方法: `main` にpushするとGitHub Actionsが `gh-pages` を同期し、Pagesへ反映
+- 更新方法: `main` にpushするとGitHub ActionsがPagesへ反映
 - 想定URL: `https://lupisflora-n.github.io/repairct/`
 
-GitHub側でPagesを有効化する場合は、`Settings > Pages` の Source を `Deploy from a branch`、Branchを `gh-pages`、Folderを `/root` にします。
+GitHub側でPagesを有効化する場合は、`Settings > Pages` の Source を `GitHub Actions` にします。
 
 初回公開後は、LP本体を編集してpushするたびに同じプレビューURLが更新されます。
 
