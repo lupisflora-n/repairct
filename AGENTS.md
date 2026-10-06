@@ -140,7 +140,7 @@ If there is ambiguity, prefer:
 - Build: one-page static LP
 - GitHub repository name: repairct
 - Repository visibility: private
-- Instagram URL: https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&utm_source=qr
+- Instagram URL: https://www.instagram.com/repairct_24?stkn=MXBkd2tvMXhrMWs3eg==
 - Photos are partially finalized for the repair photo list
 - Representative name: 田中佑弥
 - Independent age: 23
