@@ -27,7 +27,7 @@ docs/github-pages.md
 
 ## 後から差し替える項目
 
-- Instagram URL: `https://www.instagram.com/yu_2k4?igsh=cmZ2MjN5dHgyc2Fm&utm_source=qr`
+- Instagram URL: `https://www.instagram.com/repairct_24?stkn=MXBkd2tvMXhrMWs3eg==`
 - 施工写真: `assets/images/works/` に現在のBefore / After写真を配置済み
 - 代表者名: 田中佑弥
 - ロゴ画像: ヒーローに `assets/logos/repairct-wordmark-flow.svg`、ヘッダーに `assets/logos/repairct-r-flow.svg`
